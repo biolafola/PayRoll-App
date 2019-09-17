@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "James Franco",
+      "password": "maison2012",
+      "job description": "Manager",
+      "level": "Director",
+      "payment status": false
+    }
+  ],
+  "human-resources": [
+    {
+      "id": 1,
+      "username": "Peter Davos",
+      "password": "maison2014",
+      "job description": "Director of Human Resources",
+      "level": "Director",
+      "payment status": false
+    },
+
+    {
+      "id": 2,
+      "username": "Gbemi Isaacs",
+      "password": "maison2015",
+      "job description": "Human Resources Consultant",
+      "level": "Executive",
+      "payment status": false
+    }
+  ]
+}
