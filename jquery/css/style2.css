@@ -135,9 +135,9 @@ h1#header{
 
 .edit-btn {
   position: absolute;
-  background-color: rgb(27, 158, 27); 
+  background-color: rgba(207, 207, 207, 0.602); 
   border: none; 
-  color: white; 
+  color: #428bca; 
   padding: 6px 10px;
   font-size: 22px; 
   cursor: pointer; 
@@ -148,11 +148,26 @@ h1#header{
 
 
 .edit-btn:hover {
-  background-color: rgb(24, 100, 24);
+  background-color: rgb(92, 113, 141);
+  color: white; 
 }
-  
+
+/* font awesome fix */
+.fa { font-family: 'FontAwesome' !important; } 
+.fas { font-family: 'FontAwesome' !important; } 
 
 
+.pacifico{
+  font-family: pacifico;
+}
 
+.modal-content{
+  width: 150%;
+  margin-top:  250px;
+}
+
+#userId{
+  font-size: 0%;
+}
     
 

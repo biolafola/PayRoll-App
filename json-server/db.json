@@ -4,17 +4,16 @@
       "id": 1,
       "name": "James Franco",
       "password": "maison2012",
-      "job-description": "Manager",
-      "level": "Director",
-      "salary": "N2,000,000",
+      "job-description": "Human Resources Consultant",
+      "level": "Executive",
+      "salary": "N180,000",
       "payment-status": true
     },
-
     {
       "id": 2,
       "name": "Gbemi Isaacs",
       "password": "maison2012",
-      "job-description": "Human Resources Consultant",
+      "job-description": "Human Resources Consultant ",
       "level": "Executive",
       "salary": "N180,000",
       "payment-status": false
@@ -30,7 +29,6 @@
       "payment status": false,
       "logged-in": false
     },
-
     {
       "id": 2,
       "username": "Gbemi Isaacs",

@@ -54,6 +54,7 @@ $(function() {
 
         $.ajax({
                         type: "GET",
+                        async: false,
                         url: "http://localhost:3000/human-resources",
                         dataType: 'json',     
 
