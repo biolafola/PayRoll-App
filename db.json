@@ -16,7 +16,7 @@
       "job-description": "Blogger",
       "level": "Executive",
       "salary": "N20,000",
-      "payment-status": false
+      "payment-status": true
     },
     {
       "id": 4,
@@ -25,7 +25,7 @@
       "job-description": "Human Resources Consultant",
       "level": "Consultant",
       "salary": "N200,000",
-      "payment-status": false
+      "payment-status": true
     }
   ],
   "human-resources": [

@@ -109,6 +109,51 @@ $(document).ready(function(){
         })
        
 
+
+    // PAY ALL EMPLOYEES
+    $("#pay-btn").click(function(){
+
+        //get length of employees
+        
+         $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/employees",
+            dataType: 'json',     
+    
+            }).done(function(data){
+                    //loop through all data and pay them
+                    let patchData = {"payment-status": true}
+                    $.map(data, (element, index)=>{
+                        let url = "http://localhost:3000/employees/" + element.id;
+
+                        $.ajax({
+
+                            type: "PATCH",
+                            url: url,
+                            data: JSON.stringify(patchData),
+                            dataType: "json",
+                            processData: false,
+                            contentType: "application/json",
+                            success: function(data) {
+                             alert("success");
+                            },
+                            error : function(){
+                                alert("There Was an Error");
+                            }   
+            
+                        });
+
+                        
+                        setTimeout(function(){// wait for .2 secs 
+                            window.location.reload(); // then reload the page
+                       }, 200); 
+
+                    });
+            });
+
+        
+    });
+
 // DOCREADY END
 });
 
