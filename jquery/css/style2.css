@@ -152,6 +152,25 @@ h1#header{
   color: white; 
 }
 
+.del-btn {
+  position: absolute;
+  background-color: rgba(207, 207, 207, 0.602); 
+  border: none; 
+  color: #ca4242; 
+  padding: 6px 10px;
+  font-size: 22px; 
+  cursor: pointer; 
+  top: 20px;
+  right: 180px;
+  border-radius: 8px;
+}
+
+
+.del-btn:hover {
+  background-color: rgb(141, 92, 107);
+  color: white; 
+}
+
 /* font awesome fix */
 .fa { font-family: 'FontAwesome' !important; } 
 .fas { font-family: 'FontAwesome' !important; } 

@@ -11,11 +11,20 @@
     },
     {
       "id": 2,
+      "name": "Peter Komolafe",
+      "password": "maison2012",
+      "job-description": "Blogger",
+      "level": "Executive",
+      "salary": "N20,000",
+      "payment-status": false
+    },
+    {
+      "id": 4,
       "name": "Gbemi Isaacs",
       "password": "maison2012",
-      "job-description": "Human Resources Consultant ",
-      "level": "Executive",
-      "salary": "N180,000",
+      "job-description": "Human Resources Consultant",
+      "level": "Consultant",
+      "salary": "N200,000",
       "payment-status": false
     }
   ],

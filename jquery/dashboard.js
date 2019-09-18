@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    let tempDelId = 0;
     // WHEN PAGE IS LOADED
     loadDashboard();
  
@@ -76,8 +76,8 @@ $(document).ready(function(){
                 contentType: "application/json",
                 success: function(data) {
                  
-                        setTimeout(function(){// wait for .7 secs(2)
-                             window.location.reload(); // then reload the page.(3)
+                        setTimeout(function(){// wait for .7 
+                             window.location.reload(); // then reload the page
                         }, 700); 
                 },
                 error : function(){
@@ -87,6 +87,27 @@ $(document).ready(function(){
             });
            
         });
+
+        //SET TEMP DEL ID WHEN USER PRESSES DEL BUTTON
+        $("body").on("click", ".del-btn", function(){
+            tempDelId = ($(this).attr("id"));
+        })
+        // >>>>GET DELETE BUTTON TO DELETE USER
+        $("#modal-del-btn").click(function(){
+            let url  = "http://localhost:3000/employees/" + tempDelId;
+
+            $.ajax({
+                url: url,
+                type: 'DELETE',
+                success: function(result) {
+                    setTimeout(function(){// wait for .2 
+                        window.location.reload(); // then reload the page
+                   }, 200); 
+                }
+            });
+            
+        })
+       
 
 // DOCREADY END
 });
@@ -112,7 +133,8 @@ function loadDashboard(){
                     "<div class = \"p-lev\"><p> <span class = \"span-a\">Level:</span>"+element.level+"</p></div> "+
                     "<div class = \"p-sal\"><p> <span class = \"span-a\">Salary:</span>"+element.salary+"</p></div> "+
                     "<div class = \"p-sts\"><p> <span class = \"span-a\">Payment Status:</span> <span class = \"pending\">Pending</span> </p></div>"+
-                    "<button class=\"edit-btn\" id=\"" +element.name+ "\" data-toggle=\"modal\" data-target=\"#modalLoginAvatar\">edit <i class=\"fas fa-edit\"></i></button>"
+                    "<button class=\"edit-btn\" id=\"" +element.name+ "\" data-toggle=\"modal\" data-target=\"#modalLoginAvatar\">edit <i class=\"fas fa-edit\"></i></button>"+
+                    "<button id = \"" +element.id+ "\"class=\"del-btn\" data-toggle=\"modal\" data-target=\"#centralModalDanger\">delete    <i class=\"fa fa-trash\"></i></button>"
                     ); 
                     }
                     if(element["payment-status"] == true){
@@ -124,7 +146,8 @@ function loadDashboard(){
                     "<div class = \"p-lev\"><p> <span class = \"span-a\">Level:</span>"+element.level+"</p></div> "+
                     "<div class = \"p-sal\"><p> <span class = \"span-a\">Salary:</span>"+element.salary+"</p></div> "+
                     "<div class = \"p-sts\"><p> <span class = \"span-a\">Payment Status:</span> <span class = \"succ\">Successful</span> </p></div>"+
-                    "<button class=\"edit-btn\" id=\"" +element.name+ "\" data-toggle=\"modal\" data-target=\"#modalLoginAvatar\">edit <i class=\"fas fa-edit\"></i></button>"
+                    "<button class=\"edit-btn\" id=\"" +element.name+ "\" data-toggle=\"modal\" data-target=\"#modalLoginAvatar\">edit <i class=\"fas fa-edit\"></i></button>"+
+                    "<button id = \"" +element.id+ "\"class=\"del-btn\" data-toggle=\"modal\" data-target=\"#centralModalDanger\">delete    <i class=\"fa fa-trash\"></i></button>"
                     );
                    }
                 });
