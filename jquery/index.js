@@ -50,6 +50,7 @@ $(function() {
      
        let user = $("#username").val();
        let pw  = $("#password").val();
+       
 
         $.ajax({
                         type: "GET",
@@ -59,11 +60,18 @@ $(function() {
                     }).done(function(data){
                         //foo checks the value of user & pw with database
                         let foo = data.filter((element, index)=>{
+                            
                                 return element.username == user && element.password == pw;
                     });
+                    console.log(foo);
                     //do action here if user is authentic
                     if(foo.length > 0){
+                        
                         alert("welcome User");
+                        //set his login status to true
+
+                        //load the dashboard page
+                       window.location = 'dashboard.html';
                     }
                     //do action here if user is not authentic
                     else{

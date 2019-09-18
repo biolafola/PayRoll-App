@@ -1,0 +1,158 @@
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+:root{
+    --size:450px;
+    --bg:#CDE;
+  }
+
+
+body{
+  padding:0 100px 100px;
+  background-image: url("../../images/skyline.jpg");
+  background-position: center;
+  background-attachment: auto;
+  background-repeat: no-repeat;
+}
+
+h1#header{
+  text-align: center;
+  padding:50px;
+  font-size: 62px;
+  font-family: "Pacifico";
+    text-shadow: (0 2px 2px darken(var(--bg),40%));
+}
+
+
+
+.article{
+  position: relative;
+  padding-left: var(--size)/2;
+  padding-right: var(--size)/2;
+  height: 140px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.849);
+  border-radius:var(--size);
+  cursor:pointer;}
+
+  .article:hover{
+    background-color: rgba(216, 216, 216, 0.808);
+    ;}
+  
+  
+  h1{
+    height: var(--size)/2;
+    line-height: var(--size)/2;
+    font-size: 32px;
+    /* border-bottom: 2px solid var(--bg); */
+    color: #428bca;
+    transition: .4s;
+  }
+  h2{
+    font-size: 42px;
+    color: white;
+
+  }
+  p{
+    color: #888;
+  }
+
+  .img-wrapper{
+    border-radius:300px;
+    height: 120px;
+    width: 120px;
+  }
+  
+  .row{
+    display: inline-block;
+    width: 80%;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.13);
+    opacity: 20px;
+    border: 3px rgba(255, 255, 255, 0.815) solid; 
+    border-radius: 80px;
+    padding: 50px;
+  }
+  .img-div{
+    padding: 10px;
+       
+    
+  }
+  .abs-h{
+    position: absolute;
+    left:150px;
+    top:25px;
+    font-family: Pacifico;
+  }
+  .divider{
+    width: 80%;
+    border-bottom: 2px solid #428bca;
+    position: absolute;
+    top:70px;
+    left: 150px;
+    
+  }
+
+  .p-jd{
+    position: absolute;
+    left:150px;
+    top:80px;
+  }
+  .p-lev{
+    position: absolute;
+    left:450px;
+    top:80px;
+  }
+  .span-a{
+    color: #428bca;
+    font-weight: bold;
+    
+  }
+
+
+.p-sal{
+  position: absolute;
+  left:650px;
+  top:80px;
+}
+
+.p-sts{
+  position: absolute;
+  left:850px;
+  top:80px;
+}
+
+.pending{
+  color:red;
+  
+}
+.succ{
+  color:green;
+  
+}
+
+.edit-btn {
+  position: absolute;
+  background-color: rgb(27, 158, 27); 
+  border: none; 
+  color: white; 
+  padding: 6px 10px;
+  font-size: 22px; 
+  cursor: pointer; 
+  top: 20px;
+  right: 90px;
+  border-radius: 8px;
+}
+
+
+.edit-btn:hover {
+  background-color: rgb(24, 100, 24);
+}
+  
+
+
+
+    
+

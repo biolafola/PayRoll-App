@@ -4,9 +4,20 @@
       "id": 1,
       "name": "James Franco",
       "password": "maison2012",
-      "job description": "Manager",
+      "job-description": "Manager",
       "level": "Director",
-      "payment status": false
+      "salary": "N2,000,000",
+      "payment-status": true
+    },
+
+    {
+      "id": 2,
+      "name": "Gbemi Isaacs",
+      "password": "maison2012",
+      "job-description": "Human Resources Consultant",
+      "level": "Executive",
+      "salary": "N180,000",
+      "payment-status": false
     }
   ],
   "human-resources": [
@@ -14,9 +25,10 @@
       "id": 1,
       "username": "Peter Davos",
       "password": "maison2014",
-      "job description": "Director of Human Resources",
+      "job-description": "Director of Human Resources",
       "level": "Director",
-      "payment status": false
+      "payment status": false,
+      "logged-in": false
     },
 
     {
@@ -25,7 +37,8 @@
       "password": "maison2015",
       "job description": "Human Resources Consultant",
       "level": "Executive",
-      "payment status": false
+      "payment status": false,
+      "logged-in": false
     }
   ]
 }
