@@ -7,7 +7,8 @@
       "job-description": "Human Resources Consultant",
       "level": "Executive",
       "salary": "N180,000",
-      "payment-status": true
+      "payment-status": 1,
+      "photo": "../images/man.jpg"
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "job-description": "Blogger",
       "level": "Executive",
       "salary": "N20,000",
-      "payment-status": true
+      "payment-status": 1,
+      "photo": "../images/man.jpg"
     },
     {
       "id": 4,
@@ -25,7 +27,18 @@
       "job-description": "Human Resources Consultant",
       "level": "Consultant",
       "salary": "N200,000",
-      "payment-status": true
+      "payment-status": 1,
+      "photo": "../images/man.jpg"
+    },
+    {
+      "name": "Sylvester Chisomdi",
+      "password": "SJn2Wku62Uqj5RA",
+      "job-description": "Ladies Man",
+      "level": "PHD",
+      "salary": "500,0000",
+      "payment-status": 1,
+      "photo": "../images/man.jpg",
+      "id": 5
     }
   ],
   "human-resources": [

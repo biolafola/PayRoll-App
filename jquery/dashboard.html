@@ -55,15 +55,14 @@
       
       
       <!-- CONTAINER FOR LIST -->
-      <div  id = "employee-list">
+      <div id = "employee-list">
         </div>
+        <div><h2 id= "dash-heading">Dashboard</h2></div> <button id = "pay-btn">Pay All Employees <i class="fa fa-credit-card"></i></button>
+            <button id = "create-btn" data-toggle="modal" data-target="#modalContactForm">Add New Employees <i class="fa fa-plus"></i></button>
         <div class="row">
 
             <!-- EMPLOYEES HEADING -->
-            
-            <span><h2>Dashboard</h1> <button id = "pay-btn">Pay All Employees <i class="fa fa-credit-card"></i></button></span>
-          
-            <div id = "Peter Davos" class = "article">             
+            <!-- <div id = "Peter Davos" class = "article">             
               <div class = "img-div"><img class="img-wrapper" src="../images/man.jpg" alt="" /></div>
               <h1 class = "abs-h">Peter Davos</h1>
               <span class = "divider"></span>
@@ -73,14 +72,14 @@
               <div class = "p-sts"><p> <span class = "span-a">Payment Status:</span> <span class = "pending">Pending</span> <span class = "succ">Successful</span> </p></div>
               <button id = "Peter Davos"class="edit-btn" data-toggle="modal" data-target="#modalLoginAvatar">edit     <i class="fas fa-edit"></i></button>
               <button id = "1"class="del-btn" data-toggle="modal" data-target="#centralModalDanger">delete    <i class="fa fa-trash"></i></button>
-            </div>
+            </div> -->
 
           </div>
 
       
 
 
-<!--Modal: Login with Avatar Form-->
+<!--Modal: Edit User Form-->
 <div class="modal fade" id="modalLoginAvatar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
 <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
@@ -125,7 +124,7 @@ aria-hidden="true">
 
 
       <div class="text-center mt-4">
-        <button class="btn btn-cyan mt-1" id="update-btn">Update <i class="fas fa-sign-in ml-1"></i></button>
+        <button type = "submit" class = "btn btn-cyan mt-1" id="update-btn">Update <i class="fas fa-sign-in ml-1"></i></button>
       </div>
     </div>
 
@@ -168,7 +167,90 @@ aria-hidden="true">
     <!--/.Content-->
   </div>
 </div>
-<!-- Central Modal Medium Danger-->
+
+
+
+<!-- MODAL ADD USER -->
+
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <!--Modal: Contact form-->
+  <form name= "adduser" class="modal-dialog cascading-modal" role="document" id="add-user-form">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Header-->
+      <div class="modal-header primary-color white-text">
+        <h4 class="title" >
+          <i class="fa fa-pencil"></i> Add User</h4>
+        <button type="button" class="close waves-effect waves-light" data-dismiss="modal"
+          aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body">
+
+        <!-- Material input name -->
+        <div class="md-form form-sm">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="text" id="add-username" class="form-control form-control-sm" name = "username">
+          <label for="add-username">Name</label>
+        </div>
+
+        <!-- Material input pw -->
+        <div class="md-form form-sm">
+          <i class="fa fa-lock prefix"></i>
+          <input type="password" id="add-password" class="form-control form-control-sm" name = "password">
+          <label for="add-password">Password</label>
+        </div>
+
+        <!-- Material input jd -->
+        <div class="md-form form-sm">
+          <i class="fa fa-tag prefix"></i>
+          <input type="text" id="add-jd" class="form-control form-control-sm"  name = "jd">
+          <label for="add-jd">Job Description</label>
+        </div>
+
+        <!-- Material input level -->
+        <div class="md-form form-sm">
+                <i class="fa fa-tag prefix"></i>
+                <input type="text" id="add-level" class="form-control form-control-sm" name = "level">
+                <label for="add-level">Level</label>
+              </div>
+        
+         <!-- Material input salary -->
+         <div class="md-form form-sm">
+                <i class="fa fa-tag prefix"></i>
+                <input type="text" id="add-salary" class="form-control form-control-sm" name = "salary">
+                <label for="add-salary">Salary(Naira)</label>
+              </div>
+
+        <!-- Photo Upload -->
+        <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Photo</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="add-photo"
+                    aria-describedby="inputGroupFileAddon01" name = "photo">
+                  <label class="custom-file-label" for="add-photo">Choose file</label>
+                </div>
+              </div>
+
+        <div class="text-center mt-4 mb-2">
+          <button class="btn btn-primary" id = "add-user-submit">Update
+            <i class="fa fa-send ml-2"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+</form>
+  <!--/Modal: Contact form-->
+</div>
 
 
    

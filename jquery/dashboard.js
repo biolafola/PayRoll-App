@@ -122,7 +122,7 @@ $(document).ready(function(){
     
             }).done(function(data){
                     //loop through all data and pay them
-                    let patchData = {"payment-status": true}
+                    let patchData = {"payment-status": 1}
                     $.map(data, (element, index)=>{
                         let url = "http://localhost:3000/employees/" + element.id;
 
@@ -134,25 +134,101 @@ $(document).ready(function(){
                             dataType: "json",
                             processData: false,
                             contentType: "application/json",
-                            success: function(data) {
-                             alert("success");
-                            },
-                            error : function(){
-                                alert("There Was an Error");
-                            }   
-            
-                        });
-
+                            error: function(result) {
+                                alert("Oops! Something must have happened.... This is rather embarassing.");
+                                setTimeout(function(){// wait for .2 
+                                    window.location.reload(); // then reload the page
+                               }, 200); 
+                            } 
+                        })
                         
-                        setTimeout(function(){// wait for .2 secs 
-                            window.location.reload(); // then reload the page
-                       }, 200); 
-
                     });
             });
+            alert("Payment was successful... You're a boss!");
+                        setTimeout(function(){// wait for .2 secs 
+                        window.location.reload(); // then reload the page
+                       }, 200); 
+
 
         
     });
+
+     ///VALIDATE ADD USER FORM and add user
+     $("form[name='adduser']").validate({
+        // Specify validation rules
+        rules: {
+          // The key name on the left side is the name attribute
+          // of an input field. Validation rules are defined
+          // on the right side
+          username: "required",
+          password: {
+            required: true,
+            minlength: 5
+          },
+          jd: "required",
+          level: "required",
+          salary: {required: true, digits:true}
+
+        },
+        // Specify validation error messages
+        messages: {
+          username: "Please enter your firstname",
+          password: {
+            required: "Please provide a password",
+            minlength: "Your password must be at least 5 characters long"
+          },
+          jd: "Please specify a Job- Description",
+          level: "Please add a job level or qualification",
+          salary: {required:"Please provide a salary range", digits:"Your input should consist of only digits(0-9)!"}
+        },
+        submitHandler: function (form, event) {
+            console.log("Submitted!");
+            event.preventDefault();
+       
+            // CREATE NEW EMPLOYEES
+
+        //    Store input as variables first
+            let username = $("#add-username").val();
+            let pw = $("#add-password").val();
+            let jd = $("#add-jd").val();
+            let level = $("#add-level").val();
+            let salary = $("#add-salary").val();
+            let photo = $("#add-photo").val();
+            
+            postdata = {
+                "name": username,
+                "password": pw,
+                "job-description": jd,
+                "level": level,
+                "salary": salary,
+                "payment-status": false,
+                "photo": "../images/man.jpg"
+             
+            }
+            //send to server
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/employees",
+                data: JSON.stringify(postdata),
+                success: function(status){
+                    setTimeout(function(){// wait for .2 secs 
+                        window.location.reload(); // then reload the page
+                   }, 200)},
+                dataType: "json"
+              });
+           
+                
+             
+    
+       
+      } 
+
+    })
+      
+
+
+
+   
 
 // DOCREADY END
 });
@@ -170,7 +246,7 @@ function loadDashboard(){
                $.map(data, (element, index)=>{
 
                     if(element["payment-status"] == false){
-                       $(".row").append("<div id = \"" +element.id+ "\" class = \"article\"> " +           
+                       $(".row").prepend("<div id = \"" +element.id+ "\" class = \"article\"> " +           
                     "<div class = \"img-div\"><img class=\"img-wrapper\" src=\"../images/man.jpg\" alt=\"\" /></div>" +
                     "<h1 class = \"abs-h\">"+element.name+"</h1>" +
                     "<span class = \"divider\"></span>" +
@@ -183,7 +259,7 @@ function loadDashboard(){
                     ); 
                     }
                     if(element["payment-status"] == true){
-                       $(".row").append("<div id = \"" +element.id+ "\" class = \"article\"> " +           
+                       $(".row").prepend("<div id = \"" +element.id+ "\" class = \"article\"> " +           
                     "<div class = \"img-div\"><img class=\"img-wrapper\" src=\"../images/man.jpg\" alt=\"\" /></div>" +
                     "<h1 class = \"abs-h\">"+element.name+"</h1>" +
                     "<span class = \"divider\"></span>" +
