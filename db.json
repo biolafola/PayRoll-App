@@ -1,16 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "James Franco",
-      "password": "maison2012",
-      "job-description": "Human Resources Consultant",
-      "level": "Executive",
-      "salary": "N180,000",
-      "payment-status": 1,
-      "photo": "../images/man.jpg"
-    },
-    {
       "id": 2,
       "name": "Peter Komolafe",
       "password": "maison2012",
@@ -33,12 +23,22 @@
     {
       "name": "Sylvester Chisomdi",
       "password": "SJn2Wku62Uqj5RA",
-      "job-description": "Ladies Man",
+      "job-description": "Ladies Guy",
       "level": "PHD",
       "salary": "500,0000",
       "payment-status": 1,
       "photo": "../images/man.jpg",
       "id": 5
+    },
+    {
+      "name": "idowu",
+      "password": "hhhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "job-description": "uuu",
+      "level": "iii",
+      "salary": "9",
+      "payment-status": "false",
+      "photo": "../images/man.jpg",
+      "id": 6
     }
   ],
   "human-resources": [
