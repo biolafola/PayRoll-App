@@ -7,7 +7,7 @@
       "job-description": "Blogger",
       "level": "Executive",
       "salary": "N20,000",
-      "payment-status": 1,
+      "payment-status": 0,
       "photo": "../images/man.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "job-description": "Human Resources Consultant",
       "level": "Consultant",
       "salary": "N200,000",
-      "payment-status": 1,
+      "payment-status": 0,
       "photo": "../images/man.jpg"
     },
     {
@@ -26,7 +26,7 @@
       "job-description": "Ladies Guy",
       "level": "PHD",
       "salary": "500,0000",
-      "payment-status": 1,
+      "payment-status": 0,
       "photo": "../images/man.jpg",
       "id": 5
     },
@@ -36,9 +36,29 @@
       "job-description": "uuu",
       "level": "iii",
       "salary": "9",
-      "payment-status": "false",
+      "payment-status": 0,
       "photo": "../images/man.jpg",
       "id": 6
+    },
+    {
+      "name": "Sylvester Okun",
+      "password": "mammamamama",
+      "job-description": "Dope Engineer",
+      "level": "Director",
+      "salary": "500000",
+      "payment-status": 0,
+      "photo": "../images/man.jpg",
+      "id": 7
+    },
+    {
+      "name": "Gbemi Isaacs",
+      "password": "mmmmm",
+      "job-description": "mmmmmm",
+      "level": "mmmmm",
+      "salary": "77777",
+      "payment-status": 0,
+      "photo": "../images/man.jpg",
+      "id": 8
     }
   ],
   "human-resources": [

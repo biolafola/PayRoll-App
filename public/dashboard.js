@@ -147,6 +147,49 @@ $("#pay-btn").click(function(){
         
 });
 
+///RESEP PAYMENT
+$("#reset-btn").click(function(){
+
+    //get length of employees
+    
+     $.ajax({
+        type: "GET",
+        url: "http://localhost:3000/employees",
+        dataType: 'json',     
+
+        }).done(function(data){
+                //loop through all data and pay them
+                let patchData = {"payment-status": 0}
+                $.map(data, (element, index)=>{
+                let url = "http://localhost:3000/employees/" + element.id;
+
+                    $.ajax({
+
+                        type: "PATCH",
+                        url: url,
+                        data: JSON.stringify(patchData),
+                        dataType: "json",
+                        processData: false,
+                        contentType: "application/json",
+                        error: function(result) {
+                                alert("Oops! Something must have happened.... This is rather embarassing.");
+                                setTimeout(function(){// wait for .2 
+                                window.location.reload(); // then reload the page
+                           }, 200); 
+                        } 
+                    })
+                    
+                });
+        });
+        alert("Pay up boss!");
+                    setTimeout(function(){// wait for .2 secs 
+                    window.location.reload(); // then reload the page
+                   }, 200); 
+
+
+    
+});
+
      ///VALIDATE ADD USER FORM and add user
      $("form[name='adduser']").validate({
         // Specify validation rules
@@ -195,7 +238,7 @@ $("#pay-btn").click(function(){
                 "job-description": jd,
                 "level": level,
                 "salary": salary,
-                "payment-status": 1,
+                "payment-status": 0,
                 "photo": "../images/man.jpg"
              
             }
